@@ -16,7 +16,14 @@ PlayRule.getPrompt = function(answers, inputs) {
       countB += 1;
     }
   }
-  return countA + 'A' + countB + 'B';
+
+  var prompt =  countA + 'A' + countB + 'B';
+
+  if(answers.toString() === inputs.toString()) {
+    prompt = 'Congratulations!!!';
+  }
+  
+  return prompt;
 }
 
 module.exports = PlayRule;

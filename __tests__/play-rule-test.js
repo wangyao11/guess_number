@@ -29,5 +29,12 @@ describe('PlayRule', function() {
 
       expect(result).toBe('0A4B');
     });
+
+    it('shuold return a Congratulations!!! String', function() {
+
+      var result = PlayRule.getPrompt([1, 3, 4, 7], [1, 3, 4, 7]);
+
+      expect(result).toBe('Congratulations!!!');
+    });
   });
 });
