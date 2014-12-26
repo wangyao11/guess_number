@@ -22,5 +22,12 @@ describe('PlayRule', function() {
 
       expect(result).toBe('2A2B');
     });
+
+    it('shuold return a 0A4B String', function() {
+
+      var result = PlayRule.getPrompt([1, 3, 4, 7], [3, 1, 7, 4]);
+
+      expect(result).toBe('0A4B');
+    });
   });
 });
