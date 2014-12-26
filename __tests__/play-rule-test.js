@@ -45,5 +45,12 @@ describe('PlayRule', function() {
 
       expect(result).toBe('GameOver!!!');
     });
+
+    it('shuold return a Congratulations!!! String', function() {
+      playRule.times = 1;
+      var result = playRule.getPrompt([1, 3, 4, 7], [1, 3, 4, 7]);
+
+      expect(result).toBe('Congratulations!!!');
+    });
   });
 });
