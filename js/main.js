@@ -10,13 +10,13 @@ function start() {
 
   console.log('游戏开始！');
   console.log('_ _ _ _');
-  console.log('请猜这4个数：');
   playStart(6, 4, rl);
 }
+
 function playStart(times, countLength, rl) {
   var playRule = new PlayRule(times);
   var answers = RandomNumbers.getRandomNumbers(countLength);
-
+  console.log('请猜这' + countLength + '个数：');
 
   rl.on('line', function(input) {
 
@@ -27,7 +27,7 @@ function playStart(times, countLength, rl) {
     if(prompt === 'Congratulations!!!' || prompt === 'GameOver!!!'){
       rl.close();
     } else {
-      console.log('请再猜4个数：' + '(您还有' + playRule.times + '次机会）');
+      console.log('请再猜' + countLength + '个数：' + '(您还有' + playRule.times + '次机会）');
     }
   });
 }
