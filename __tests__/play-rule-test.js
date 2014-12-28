@@ -19,9 +19,9 @@ describe('PlayRule', function() {
 
     it('shuold return a 2A2B String', function() {
 
-      var result = playRule.getPrompt([1, 3, 4, 7], [1, 3, 7, 4]);
+      var result = playRule.getPrompt([1, 3, 4, 7], [4, 6, 9, 8]);
 
-      expect(result).toBe('2A2B');
+      expect(result).toBe('0A1B');
     });
 
     it('shuold return a 0A4B String', function() {
