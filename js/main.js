@@ -24,7 +24,10 @@ function playStart(times, countLength, rl) {
     var prompt = playRule.getPrompt(inputNumbers, answers);
     console.log(prompt);
 
-    if(prompt === 'Congratulations!!!' || prompt === 'GameOver!!!'){
+    if (prompt === 'GameOver!!!') {
+      console.log('正确答案：' + answers.toString());
+      rl.close();
+    } else if (prompt === 'Congratulations!!!'){
       rl.close();
     } else {
       console.log('请再猜' + countLength + '个数：' + '(您还有' + playRule.times + '次机会）');
