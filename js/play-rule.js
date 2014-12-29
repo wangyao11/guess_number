@@ -1,5 +1,5 @@
 var _ = require('lodash');
-function PlayRule(times){
+function PlayRule(times) {
 
   this.times = times;
 
@@ -9,7 +9,7 @@ PlayRule.prototype.getPrompt = function(answers, inputs) {
   var countA = 0;
   var countB = 0;
   this.times -= 1;
-  for (var i = 0; i < inputs.length; i++) {
+  for (var i = 0; i < answers.length; i++) {
     if(inputs[i] === answers[i]) {
       countA += 1;
       continue;
