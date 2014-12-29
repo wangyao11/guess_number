@@ -17,11 +17,11 @@ describe('PlayRule', function() {
       expect(result).toBe('0A0B');
     });
 
-    it('shuold return a 0A1B String', function() {
+    it('shuold return a 1A1B String', function() {
 
-      var result = playRule.getPrompt([1, 3, 4, 7], [4, 6, 9, 8]);
+      var result = playRule.getPrompt([1, 6, 4, 7], [4, 6, 9, 8]);
 
-      expect(result).toBe('0A1B');
+      expect(result).toBe('1A1B');
     });
 
     it('shuold return a 0A4B String', function() {
